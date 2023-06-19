@@ -82,7 +82,7 @@ function chooseQuiz() {
 </div>
    `
 }
-function HTML(){
+function HTML() {
     document.getElementById('buttons').remove()
     document.getElementById("cardContain").innerHTML = `
 <div class="cardContainer" id="cardContainer">
@@ -158,12 +158,12 @@ let JavaScriptQuiz = [
     "",
     {
         Question: "Inside which HTML element do we put the JavaScript?",
-        correctOption: "<script>",
+        correctOption: 2,
         answer: [
             {
                 options: [
-                    "<script>",
                     "<javascript>",
+                    "<script>",
                     "</js>",
                     "<scripting>"
                 ],
@@ -172,7 +172,7 @@ let JavaScriptQuiz = [
     },
     Question2 = {
         Question: "What is the correct JavaScript syntax to change the content of the HTML element below?",
-        correctOption: "document.getElementById('demo').innerHTML = 'Hello World!'",
+        correctOption: 1,
         answer: [
             {
                 options: [
@@ -187,13 +187,14 @@ let JavaScriptQuiz = [
     },
     Question3 = {
         Question: "Where is the correct place to insert a JavaScript?",
-        correctOption: "The <head> section",
+        correctOption: 3,
         answer: [
             {
                 options: [
-                    "The <head> section",
+
                     "The <body> section",
                     "Both the <head> section and the <body> section are correct ",
+                    "The <head> section",
                     "</js>",
                 ],
             }
@@ -202,7 +203,7 @@ let JavaScriptQuiz = [
     },
     Question4 = {
         Question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        correctOption: "<script src='xxx.js'>",
+        correctOption: 2,
         answer: [
             {
                 options: [
@@ -216,7 +217,7 @@ let JavaScriptQuiz = [
     },
     Question5 = {
         Question: "The external JavaScript file must contain the <script> tag.",
-        correctOption: "False",
+        correctOption: 1,
         answer: [
             {
                 options: [
@@ -230,14 +231,16 @@ let JavaScriptQuiz = [
     },
     Question6 = {
         Question: "How do you write 'Hello World' in an alert box?",
-        correctOption: "alert('Hello World');",
+        correctOption: 2,
         answer: [
             {
                 options: [
                     "alertBox('Hello World');",
-                    "msg('Hello World');",
                     "alert('Hello World');",
-                    "msgBox('Hello World');"
+                    "msg('Hello World');",
+                    "msgBox('Hello World');",
+
+
                 ],
             }
 
@@ -245,13 +248,13 @@ let JavaScriptQuiz = [
     },
     Question7 = {
         Question: "How do you create a function in JavaScript?",
-        correctOption: "function myFunction()",
+        correctOption: 2,
         answer: [
             {
                 options: [
                     "function:myFunction()",
-                    "function = myFunction()",
                     "function myFunction()",
+                    "function = myFunction()",
                     "msgBox('Hello World');"
                 ],
             }
@@ -259,13 +262,13 @@ let JavaScriptQuiz = [
     },
     Question8 = {
         Question: "How do you call a function named 'myFunction'?",
-        correctOption: "myFunction()",
+        correctOption: 1,
         answer: [
             {
                 options: [
+                    "myFunction()",
                     "call function myFunction()",
                     "call myFunction()",
-                    "myFunction()",
                     "None of thses"
                 ],
             }
@@ -273,26 +276,27 @@ let JavaScriptQuiz = [
     },
     Question9 = {
         Question: "How to write an IF statement in JavaScript?",
-        correctOption: "if (i == 5)",
+        correctOption: 1,
         answer: [
             {
                 options: [
-                    "if i = 5 then",
                     "if (i == 5)",
+                    "if i = 5 then",
                     "if i = 5",
-                    "if i == 5 then"
+                    "if i == 5 then",
                 ],
             }
         ]
     },
     Question10 = {
         Question: "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
-        correctOption: "if (i != 5)",
+        correctOption: 2,
         answer: [
             {
                 options: [
-                    "if (i != 5) ",
+
                     "if i =! 5 then",
+                    "if (i != 5) ",
                     "if (i <> 5)",
                     "if i <> 5"
                 ],
@@ -301,7 +305,7 @@ let JavaScriptQuiz = [
     },
     Question11 = {
         Question: "How does a WHILE loop start?",
-        correctOption: "while (i <= 10)",
+        correctOption: 1,
         answer: [
             {
                 options: [
@@ -315,7 +319,7 @@ let JavaScriptQuiz = [
     },
     Question12 = {
         Question: "How does a FOR loop start?",
-        correctOption: "for i = 1 to 5",
+        correctOption: 3,
         answer: [
             {
                 options: [
@@ -323,6 +327,7 @@ let JavaScriptQuiz = [
                     "for (i = 0; i <= 5)",
                     "for i = 1 to 5",
                     "for (i = 0; i <= 5; i++)"
+
                 ],
             }
 
@@ -334,25 +339,25 @@ let html = [
     "",
     {
         Question: "What does HTML stand for?",
-        correctOption: "Hyper Text Markup Language",
+        correctOption: 2,
         answer: [
             {
                 options: [
-                    "Hyper Text Markup Language",
                     "Home Tool Markup Language",
-                    "Hyperlinks and Text Markup Language"  ,
+                    "Hyper Text Markup Language",
+                    "Hyperlinks and Text Markup Language",
                     "None of thses"
-                    
+
                 ],
             }
         ]
     },
-    
+
 
 
     Question2 = {
         Question: "Who is making the Web standards?",
-        correctOption: "The World Wide Web Consortium",
+        correctOption: 1,
         answer: [
             {
                 options: [
@@ -360,7 +365,7 @@ let html = [
                     "Mozilla",
                     "Google",
                     "Microsoft"
-                    
+
                 ],
             }
         ]
@@ -368,15 +373,15 @@ let html = [
 
     Question3 = {
         Question: "Choose the correct HTML element for the largest heading:",
-        correctOption: "<h1>",
+        correctOption: 3,
         answer: [
             {
                 options: [
                     "<head>",
-                    "<h1>",
                     "<heading>",
+                    "<h1>",
                     "<h6>"
-                    
+
                 ],
             }
 
@@ -384,7 +389,7 @@ let html = [
     },
     Question4 = {
         Question: "What is the correct HTML element for inserting a line break?",
-        correctOption: "<br>",
+        correctOption: 2,
         answer: [
             {
                 options: [
@@ -392,14 +397,14 @@ let html = [
                     "<br>",
                     "<lb>",
                     "None of thses"
-                    
+
                 ],
             }
         ]
     },
     Question5 = {
         Question: "What is the correct HTML for adding a background color?",
-        correctOption: '<body style="background-color:yellow;">',
+        correctOption: 1,
         answer: [
             {
                 options: [
@@ -407,22 +412,22 @@ let html = [
                     "<background>yellow</background>",
                     '<body bg="yellow">',
                     "none of thses"
-                
+
                 ],
             }
         ]
     },
     Question6 = {
         Question: "Choose the correct HTML element to define important text",
-        correctOption: "<strong>",
+        correctOption: 3,
         answer: [
             {
                 options: [
+                    "<important>",
                     "<i>",
                     "<strong>",
-                    "<important>",
                     "<b>"
-                    
+
                 ],
             }
 
@@ -430,67 +435,67 @@ let html = [
     },
     Question7 = {
         Question: "Choose the correct HTML element to define emphasized text",
-        correctOption: "<em>",
+        correctOption: 1,
         answer: [
             {
                 options: [
                     "<em>",
                     "<i>",
                     "<italic>",
-                    "All of thses"
-                    
+                    "All of thses",
+
                 ],
             }
         ]
     },
     Question8 = {
         Question: "What is the correct HTML for creating a hyperlink?",
-        correctOption: '<a href="http://www.w3schools.com">W3Schools</a>',
+        correctOption: 4,
         answer: [
             {
                 options: [
-                    '<a href="http://www.w3schools.com">W3Schools</a>',
                     "<a>http://www.w3schools.com</a>",
                     '<a url="http://www.w3schools.com">W3Schools.com</a>',
-                    '<a name="http://www.w3schools.com">W3Schools.com</a>'
-                    
+                    '<a name="http://www.w3schools.com">W3Schools.com</a>',
+                    '<a href="http://www.w3schools.com">W3Schools</a>'
+
                 ],
             }
         ]
     },
     Question9 = {
         Question: "Which character is used to indicate an end tag?",
-        correctOption: "/",
+        correctOption: 2,
         answer: [
             {
                 options: [
-                    "/",
                     "<",
+                    "/",
                     "^",
                     "*"
-                
+
                 ],
             }
         ]
     },
     Question10 = {
         Question: "How can you open a link in a new tab/browser window?",
-        correctOption:  '<a href="url" target="_blank">',
+        correctOption: 1,
         answer: [
             {
                 options: [
-                    '<a href="url" target="_blank">'  ,
+                    '<a href="url" target="_blank">',
                     '<a href="url" target="new">',
                     '<a href="url" new>',
                     "All of thses"
-                    
+
                 ],
             }
         ]
     },
     Question11 = {
         Question: "Which of these elements are all <table> elements?",
-        correctOption: "<table><tr><td>",
+        correctOption: 2,
         answer: [
             {
                 options: [
@@ -498,14 +503,14 @@ let html = [
                     "<table><tr><td>",
                     "<table><head><tfoot>",
                     "if (i <> 5)"
-                    
+
                 ],
             }
         ]
     },
     Question12 = {
         Question: "Inline elements are normally displayed without starting a new line.",
-        correctOption: "True",
+        correctOption: 1,
         answer: [
             {
                 options: [
@@ -513,7 +518,7 @@ let html = [
                     "False",
                     "All of thses",
                     "None of thses"
-                    
+
                 ],
             }
 
@@ -526,7 +531,7 @@ let score = 0;
 
 function htmlnextsBtn() {
     index++
-    
+
     let Question = document.getElementById("quest").innerHTML =
         `<p class="queston">${index}) ${html[index].Question}</p>`
     for (answe in html[index].answer) {
@@ -551,7 +556,7 @@ function htmlnextsBtn() {
                         <span id="optionPrint3"></span></label>
             <div onclick="htmlnextsBtn()"  class="dtndiv">
 
-                <button class="nexsbtn" disabled  onclick="printValue()" id="nextbtn">
+                <button class="nexsbtn" disabled  onclick="htmlprintValue()" id="nextbtn">
                 <span class="disabled" class="btn-text">Continue</span>
                 <svg class="disabled" width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
@@ -561,41 +566,33 @@ function htmlnextsBtn() {
 </div>
             <span class="time" id="time"></span>
                 `
-                
+
             document.getElementById("optionPrint0").innerText = html[index].answer[answe][printe][0];
             document.getElementById("optionPrint1").innerText = html[index].answer[answe][printe][1]
             document.getElementById("optionPrint2").innerText = html[index].answer[answe][printe][2]
             document.getElementById("optionPrint3").innerText = html[index].answer[answe][printe][3]
         }
 
-    }}
-
-
-
-
-
-
-
-
-
+    }
+}
 
 
 
 
 function continu() {
     var input = document.getElementById('testKey');
-    if (input.value == 'java' ) {
-        
+    if (input.value == 'java') {
+
         var elem = document.documentElement;
         elem.webkitRequestFullscreen()
         document.getElementById("cardContainer").remove()
         document.getElementById("image").innerHTML = `
   <img class="sec" src="image/5615f45aefdef0fb2ff1b8b242b9f508ccfe3990r1-480-270_00.gif" alt="">`
 
- setTimeout(function() {
-    
-    document.getElementById("image").innerHTML = "";
-  }, 2000);
+        setTimeout(function () {
+
+            document.getElementById("image").innerHTML = "";
+        }, 2000);
         nextBtn()
     }
     else {
@@ -610,19 +607,19 @@ function continu() {
 
 function continuhtml() {
     var input = document.getElementById('testKey');
-    if (input.value == 'html' ) {
-        
+    if (input.value == 'html') {
+
         var elem = document.documentElement;
         elem.webkitRequestFullscreen()
         document.getElementById("cardContainer").remove()
         document.getElementById("image").innerHTML = `
   <img class="sec" src="image/5615f45aefdef0fb2ff1b8b242b9f508ccfe3990r1-480-270_00.gif" alt="">`
 
- setTimeout(function() {
-    
-    document.getElementById("image").innerHTML = "";
-  }, 2000);
-       htmlnextsBtn()
+        setTimeout(function () {
+
+            document.getElementById("image").innerHTML = "";
+        }, 2000);
+        htmlnextsBtn()
     }
     else {
         swal({
@@ -747,48 +744,10 @@ function enable() {
 }
 function printValue() {
     var checkedInput = document.querySelector('input[type="radio"]:checked');
-    
-    if (checkedInput.value == 1) {
-        if (JavaScriptQuiz[index].answer[answe][printe][0] === JavaScriptQuiz[index].correctOption || html[index].answer[answe][printe][0] === html[index].correctOption) {
-            score++
-    checkedInput.value = ""
-
-        }}
-    
-    if (checkedInput.value == 2) {
-        if (JavaScriptQuiz[index].answer[answe][printe][0] === JavaScriptQuiz[index].correctOption || html[index].answer[answe][printe][1] === html[index].correctOption) {
-            score++
-    checkedInput.value = ""
-
-        //    console.log( alert())
-           
-        }}
-
-    
-    if (checkedInput.value == 3) {
-        
-        if (JavaScriptQuiz[index].answer[answe][printe][0] === JavaScriptQuiz[index].correctOption || html[index].answer[answe][printe][2] === html[index].correctOption) {
-            score++
-        checkedInput.value = ""
-
-        }}
-    
-    
-    if (checkedInput.value == 4) {
-        if (JavaScriptQuiz[index].answer[answe][printe][0] === JavaScriptQuiz[index].correctOption || JavaScriptQuiz[index].answer[answe][printe][3] === JavaScriptQuiz[index].correctOption || html[index].answer[answe][printe][3] === html[index].correctOption) {
-            score++
-            
-
-   
-            checkedInput.value = ""
-
-        }}
-    
-        
-    
-       console.log(score)
+    if (checkedInput.value == JavaScriptQuiz[index].correctOption) {
+        score++
+    }
     const percentage = Math.round((score / index) * 100)
-
     if (index === 12) {
         if (Math.round((score / index) * 100) <= 50) {
             document.getElementById("quest").remove()
@@ -809,7 +768,6 @@ function printValue() {
         <p class="congra">Congratulations, you passed</p>
         <div class="per-conttainer">
         <p>
-        
         ${percentage}%</p></div>
         <button class="btn home-back" id="contieBut" onclick="home()"> Back to home
 </button>
@@ -819,69 +777,40 @@ function printValue() {
     }
 
 }
-
-// function htmlprintValue() {
-//     var checkedInput = document.querySelector('input[type="radio"]:checked');
-//     if (checkedInput.value == 1) {
-//         if (html[index].answer[answe][printe][0] === html[index].correctOption) {
-//             score++
-//             alert()
-
-//         }
-//     }
-//     if (checkedInput.value == 2) {
-//         if (html[index].answer[answe][printe][1] === html[index].correctOption) {
-//             score++
-//             alert()
-//         }
-//     }
-//     if (checkedInput.value == 3) {
-//         if (html[index].answer[answe][printe][2] === html[index].correctOption) {
-//             score++
-//             alert()
-
-//         }
-//     }
-//     if (checkedInput.value == 4) {
-//         if (html[index].answer[answe][printe][3] === html[index].correctOption) {
-//             score++
-//             alert()
-
-//         }}
-//     const percentage = Math.round((score / index) * 100)
-// console.log(score)
-
-//     if (index === 12) {
-//         if (Math.round((score / index) * 100) <= 50) {
-//             document.getElementById("quest").remove()
-//             document.getElementById("answer").remove()
-//             document.getElementById("percentage").innerHTML = `
-//     <p class="congra">Hard work is required</p>
-//     <div class="per-conttainer-failed">
-//     <p >
+function htmlprintValue() {
+    var checkedInput = document.querySelector('input[type="radio"]:checked');
+    if (checkedInput.value == html[index].correctOption) {
+        score++
+    }
+    console.log(score)
+    const percentage = Math.round((score / index) * 100)
+    if (index === 12) {
+        if (Math.round((score / index) * 100) <= 50) {
+            document.getElementById("quest").remove()
+            document.getElementById("answer").remove()
+            document.getElementById("percentage").innerHTML = `
+    <p class="congra">Hard work is required</p>
+    <div class="per-conttainer-failed">
+    <p >
     
-//     ${percentage}%</p></div>
-//     <button class="btn home-back" id="contieBut" onclick="home()"> Back to home
-// </button>
-//     `
-//         } else {
-//             document.getElementById("quest").remove()
-//             document.getElementById("answer").remove()
-//             document.getElementById("percentage").innerHTML = `
-//         <p class="congra">Congratulations, you passed</p>
-//         <div class="per-conttainer">
-//         <p>
-        
-//         ${percentage}%</p></div>
-//         <button class="btn home-back" id="contieBut" onclick="home()"> Back to home
-// </button>
-//         `
-//         }
-
-//     }
-
-// }
-
+    ${percentage}%</p></div>
+    <button class="btn home-back" id="contieBut" onclick="home()"> Back to home
+</button>
+    `
+        } else {
+            document.getElementById("quest").remove()
+            document.getElementById("answer").remove()
+            document.getElementById("percentage").innerHTML = `
+        <p class="congra">Congratulations, you passed</p>
+        <div class="per-conttainer">
+        <p>
+        ${percentage}%</p></div>
+        <button class="btn home-back" id="contieBut" onclick="home()"> Back to home
+</button>
+        `
+        }
+    }
+}
 function home() {
     window.close()
 }
