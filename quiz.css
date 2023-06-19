@@ -166,6 +166,7 @@ table {
 
 .nexsbtn {
     /* width: 3rem; */
+    position: relative;
     color: white;
     display: flex;
     justify-content: center;
