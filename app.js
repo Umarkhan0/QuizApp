@@ -575,12 +575,12 @@ let css = [
     "",
     {
         Question: "What does CSS stand for?",
-        correctOption: 1,
+        correctOption: 2,
         answer: [
             {
                 options: [
-                    "Cascading Style Sheets ",
                     "Creative Style Sheets",
+                    "Cascading Style Sheets ",
                     "Computer Style Sheets",
                     "Colorful Style Sheets"
 
@@ -609,13 +609,13 @@ let css = [
 
     Question3 = {
         Question: "Where in an HTML document is the correct place to refer to an external style sheet?",
-        correctOption: 1,
+        correctOption: 3,
         answer: [
             {
                 options: [
-                    "In the <head> section",
                     "In the <body> section",
                     "At the end of the document",
+                    "In the <head> section",
                     "None of these"
 
                 ],
@@ -640,13 +640,13 @@ let css = [
     },
     Question5 = {
         Question: "Which HTML attribute is used to define inline styles?",
-        correctOption: 3,
+        correctOption: 1,
         answer: [
             {
                 options: [
+                    'style',
                     'styles',
                     "class",
-                    'style',
                     "font"
 
                 ],
@@ -671,14 +671,14 @@ let css = [
     },
     Question7 = {
         Question: "How do you insert a comment in a CSS file?",
-        correctOption: 2,
+        correctOption: 1,
         answer: [
             {
                 options: [
-                    "' this is a comment",
                     "/* this is a comment */",
+                    "' this is a comment",
                     "// this is a comment",
-                    "// this is a comment //",
+                    "// this is a comment //"
 
                 ],
             }
@@ -686,28 +686,29 @@ let css = [
     },
     Question8 = {
         Question: "Which property is used to change the background color?",
-        correctOption: 2,
+        correctOption: 1,
         answer: [
             {
                 options: [
-                    "bgcolor",
                     'background-color',
+                    "bgcolor",
                     'color',
                     'None of these'
+
 
                 ],
             }
         ]
     },
     Question9 = {
-        Question: "How do you add a background color for all <h1> elements?",
-        correctOption: 3,
+        Question: "How do you add a background color for all h1 Elements?",
+        correctOption: 2,
         answer: [
             {
                 options: [
                     "h1.all {background-color:#FFFFFF;}",
-                    "all.h1 {background-color:#FFFFFF;}",
                     "h1 {background-color:#FFFFFF;}",
+                    "all.h1 {background-color:#FFFFFF;}",
                     "None of these"
 
                 ],
@@ -731,13 +732,13 @@ let css = [
     },
     Question11 = {
         Question: "Which CSS property controls the text size?",
-        correctOption: 3,
+        correctOption: 2,
         answer: [
             {
                 options: [
                     "font-style",
-                    "text-size",
                     "font-size",
+                    "text-size",
                     "text-style"
 
                 ],
@@ -745,15 +746,15 @@ let css = [
         ]
     },
     Question12 = {
-        Question: "What is the correct CSS syntax for making all the <p> elements bold?",
-        correctOption: 1,
+        Question: "What is the correct CSS syntax for making all the p elements bold?",
+        correctOption: 4,
         answer: [
             {
                 options: [
-                    "p {font-weight:bold;}",
+                    'p {font-weight:bold;}',
                     '<p style="text-size:bold;">',
                     '<p style="font-size:bold;">',
-                    "p {text-size:bold;}"
+                    'p {text-size:bold;}'
 
                 ],
             }
@@ -862,38 +863,38 @@ function htmlnextsBtn() {
         }
 
     }
-    let time = document.getElementById("time");
-    let nextBtnClicked = false;
-    function startTimer() {
-        timer = setInterval(function () {
-            time.innerHTML = `
-            ${min}:${sec}`;
-            sec--;
-            if (sec === -1 
-                &&
-                 min === 0) {
-                clearInterval(timer);
-                if (!nextBtnClicked) {
-                    htmlnextsBtn()
-                    score--
-                    nextBtnClicked = true;
-                }
-                clearInterval(timer);
-                sec = 59;
-                min = 1;
-                startTimer();
-            } else if (sec === -1) {
-                min--;
-                sec = 4;
-            }
+    // let time = document.getElementById("time");
+    // let nextBtnClicked = false;
+    // function startTimer() {
+    //     timer = setInterval(function () {
+    //         time.innerHTML = `
+    //         ${min}:${sec}`;
+    //         sec--;
+    //         if (sec === -1 
+    //             &&
+    //              min === 0) {
+    //             clearInterval(timer);
+    //             if (!nextBtnClicked) {
+    //                 htmlnextsBtn()
+    //                 score--
+    //                 nextBtnClicked = true;
+    //             }
+    //             clearInterval(timer);
+    //             sec = 59;
+    //             min = 1;
+    //             startTimer();
+    //         } else if (sec === -1) {
+    //             min--;
+    //             sec = 4;
+    //         }
 
-        }, 1000);
-    }
-    document.getElementById("nextbtn").addEventListener("click", function () {
-        timer = false
-        nextBtnClicked = true;
-    });
-    startTimer();
+    //     }, 1000);
+    // }
+    // document.getElementById("nextbtn").addEventListener("click", function () {
+    //     timer = false
+    //     nextBtnClicked = true;
+    // });
+    // startTimer();
 
 }
 function cssnextsBtn() {
@@ -940,41 +941,41 @@ function cssnextsBtn() {
             document.getElementById("optionPrint2").innerText = css[index].answer[answe][printe][2]
             document.getElementById("optionPrint3").innerText = css[index].answer[answe][printe][3]
         }
-
+console.log(score)
     }
-    let time = document.getElementById("time");
-    let timer;
-    let nextBtnClicked = false;
-    function startTimer() {
-        timer = setInterval(function () {
-            time.innerHTML = `
-            ${min}:${sec}`;
-            sec--;
-            if (sec === -1 
-                &&
-                 min === 0) {
-                clearInterval(timer);
-                if (!nextBtnClicked) {
-                    cssnextsBtn()
-                    score--
-                    nextBtnClicked = true;
-                }
-                clearInterval(timer);
-                sec = 59;
-                min = 1;
-                startTimer();
-            } else if (sec === -1) {
-                min--;
-                sec = 4;
-            }
+    // let time = document.getElementById("time");
+    // let timer;
+    // let nextBtnClicked = false;
+    // function startTimer() {
+    //     timer = setInterval(function () {
+    //         time.innerHTML = `
+    //         ${min}:${sec}`;
+    //         sec--;
+    //         if (sec === -1 
+    //             &&
+    //              min === 0) {
+    //             clearInterval(timer);
+    //             if (!nextBtnClicked) {
+    //                 cssnextsBtn()
+    //                 score--
+    //                 nextBtnClicked = true;
+    //             }
+    //             clearInterval(timer);
+    //             sec = 59;
+    //             min = 1;
+    //             startTimer();
+    //         } else if (sec === -1) {
+    //             min--;
+    //             sec = 4;
+    //         }
 
-        }, 1000);
-    }
-    document.getElementById("nextbtn").addEventListener("click", function () {
-        timer = false
-        nextBtnClicked = true;
-    });
-    startTimer();
+    //     }, 1000);
+    // }
+    // document.getElementById("nextbtn").addEventListener("click", function () {
+    //     timer = false
+    //     nextBtnClicked = true;
+    // });
+    // startTimer();
 
 }
 
@@ -1032,13 +1033,6 @@ function continuCSS() {
         var elem = document.documentElement;
         elem.webkitRequestFullscreen()
         document.getElementById("cardContainer").remove()
-        document.getElementById("image").innerHTML = `
-        
-  <img class="sec" src="image/5615f45aefdef0fb2ff1b8b242b9f508ccfe3990r1-480-270_00.gif" alt="">`
-        setTimeout(function () {
-
-            document.getElementById("image").innerHTML = "";
-        }, 2000);
         cssnextsBtn()
     }
     else {
@@ -1097,35 +1091,35 @@ function nextBtn() {
         }
 
     }
-    let nextBtnClicked = false;
-    function startTimer() {
-        timer = setInterval(function () {
-            time.innerHTML = `${min}:${sec}`;
-            sec--;
-            if (sec === -1 
-                &&
-                 min === 0) {
-                clearInterval(timer);
-                if (!nextBtnClicked) {
-                    nextBtn();
-                    score--
-                    nextBtnClicked = true;
-                }
-                clearInterval(timer);
-                sec = 59;
-                min = 1;
-                startTimer();
-            } else if (sec === -1) {
-                min--;
-                sec = 4;
-            }
-        }, 1000);
-    }
-    document.getElementById("nextbtn").addEventListener("click", function () {
-        timer = false
-        nextBtnClicked = true;
-    });
-    startTimer();
+    // let nextBtnClicked = false;
+    // function startTimer() {
+    //     timer = setInterval(function () {
+    //         time.innerHTML = `${min}:${sec}`;
+    //         sec--;
+    //         if (sec === -1 
+    //             &&
+    //              min === 0) {
+    //             clearInterval(timer);
+    //             if (!nextBtnClicked) {
+    //                 nextBtn();
+    //                 score--
+    //                 nextBtnClicked = true;
+    //             }
+    //             clearInterval(timer);
+    //             sec = 59;
+    //             min = 1;
+    //             startTimer();
+    //         } else if (sec === -1) {
+    //             min--;
+    //             sec = 4;
+    //         }
+    //     }, 1000);
+    // }
+    // document.getElementById("nextbtn").addEventListener("click", function () {
+    //     timer = false
+    //     nextBtnClicked = true;
+    // });
+    // startTimer();
     if (index === 13) {
         const percentage = Math.round((score / index) * 100)
         if (index === 13) {
